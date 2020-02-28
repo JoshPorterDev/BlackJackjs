@@ -1,0 +1,12 @@
+#player-cards {
+    height: 152px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#house-cards {
+    height: 152px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}

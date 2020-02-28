@@ -6,22 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Blackjack</title>
   </head>
   <body class="bg-success">
       <div class="container">
-        <div class="house-cards"></div>
         <h1 class="text-center text-white">Blackjack</h1>
+        <div class="border border-warning" id="house-cards"></div>
         <div class="heading border border-warning">
             <h3 class="text-center text-danger">Blackjack Pays 3 to 2</h3>
         </div>
-        <div class="player-cards"></div>
+        <div class="border border-warning" id="player-cards"></div>
         <div class="player-balance">
             <h3 id="player-balance" class="text-center text-white"></h3>
         </div>
         <div class="player-chips"></div>
+        <button onclick="playAudio()" href="" class="btn btn-danger">Shuffle deck</button>
+        <button onclick="stackChips()" href="" class="btn btn-danger">Stack Chips</button>
+        <button onclick="clearDivs()" class="btn btn-danger">Clear</button>
+
       </div>
 
     <!-- Optional JavaScript -->
