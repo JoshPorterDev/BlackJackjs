@@ -13,26 +13,57 @@
   </head>
   <body class="bg-success">
       <div class="container">
-        <h1 class="text-center text-white">Blackjack</h1>
-        <div class="border border-warning" id="house-cards"></div>
-        <div class="heading border border-warning">
-            <h3 class="text-center text-danger">Blackjack Pays 3 to 2</h3>
+        <div class="cash-out" id="cash-out">
+          <div class="jumbotron bg-success">
+            <h1 class="display-4 text-white text-center">You cashed out with</h1>
+            <p id="cashOutBalance" class="lead text-center text-white"></p>
+            <div class="buttons d-flex justify-content-center">
+              <a class="text-white btn btn-danger btn-lg" onclick="playAgain()" role="button">Play again</a>
+            </div>
+          </div>
         </div>
-        <div class="border border-warning" id="player-cards"></div>
-        <div class="player-balance">
-            <h3 id="player-balance" class="text-center text-white"></h3>
-        </div>
-        <div class="player-chips"></div>
-        <button onclick="playHand()" href="" class="btn btn-danger">Play Hand</button>
-        <button onclick="hit()" href="" class="btn btn-danger">Hit</button>
-        <button onclick="stand()" href="" class="btn btn-danger">Stand</button>
-        <button onclick="clearDivs()" class="btn btn-danger">Clear</button>
+        <div id="main">
+          <div>
+            <h1 class="text-white text-center">Blackjack</h1>
+            <h1 id="winner" class="text-center text-white">...</h1>
+            <!-- <div id="winner" class="alert alert-success" role="alert"></div> -->
+          </div>
+          <!-- <h1 class="text-center text-white">Blackjack</h1> -->
+          <div class="border border-warning" id="house-cards"></div>
+          <div class="heading border border-warning">
+              <h3 class="text-center text-danger">Blackjack Pays 3 to 2</h3>
+          </div>
+          <div class="border border-warning" id="player-cards"></div>
+          <div class="player-balance">
+              <h3 id="player-balance" class="text-center text-white"></h3>
+          </div>
+          <div class="player-chips"></div>
 
+          <div class="form d-flex justify-content-center">
+            <form class="d-block">
+              <p class="text-white text-center">Place your bet</p>
+              <div class="form-group">
+                <input type="range" value="0" min="1" max="200" id="betSelect" oninput="showBet(this.value)">
+              </div>
+              <p class="text-center text-white" id="bet"></p>
+            </form>
+          </div>
+
+          <div class="buttons d-flex justify-content-center">
+            <button id="playBtn" href="" class="btn btn-danger">Play Hand</button>
+            <button onclick="checkEvent(this)" id="hitBtn" href="" class="btn btn-danger">Hit</button>
+            <button onclick="checkEvent(this)" id="standBtn" href="" class="btn btn-danger">Stand</button>
+            <button id="clearBtn" class="btn btn-danger">Clear</button>
+            <button onclick="cashOut()" id="cashOut" class="btn btn-danger">Cash Out</button>
+          </div>
+          <br>
+          <h2 class="text-white text-center mt-10" id="balance"></h2>
+        </div>
       </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="main.js"></script>
+    <script src="test.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

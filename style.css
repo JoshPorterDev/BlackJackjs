@@ -10,3 +10,19 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
+.btn {
+    margin-right: 10px;
+}
+
+.hiddenCard {
+    display: none;
+}
+
+.cash-out {
+    display: none;
+}
+
+.hiddenContainer {
+    display: none;
+}
