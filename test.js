@@ -196,6 +196,9 @@ function check()
         playerBalance += playerBet * 2;
         showWinner('player');
     }
+
+    let currentScore = document.getElementById("currentScore");
+    currentScore.innerHTML = playerScore
 }
 
 function dealHand()
